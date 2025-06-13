@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans } from 'next/font/google';
 import "./globals.css";
+import { ThemeProvider } from './providers/ThemeProvider';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -21,7 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dmSans.variable} scrollbar-hide`}>
       <body>
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

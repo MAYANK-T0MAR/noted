@@ -5,8 +5,8 @@ import SideBar from "@/components/layout/sidebar";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      <div className="grid grid-cols-12 gap-4 max-w-7xl mx-auto px-4">
+    <main className="min-h-screen bg-background text-foreground transition-colors duration-400">
+      <div className="bg-background grid grid-cols-12 gap-4 max-w-7xl mx-auto px-4">
 
         {/* Sidebar */}
         <aside className="col-span-3 hidden lg:block">
@@ -14,13 +14,13 @@ export default function Home() {
         </aside>
 
         {/* Feed */}
-        <section className="col-span-12 lg:col-span-6 pb-5">
+        <section className="bg-background col-span-12 lg:col-span-6 pb-5">
           <FeedHeader />
           <FeedBox />
         </section>
 
         {/* Rightbar */}
-        <aside className="sticky top-5 col-span-3 hidden lg:block">
+        <aside className="bg-background sticky top-5 col-span-3 hidden lg:block">
           <RightSidebar />
         </aside>
       </div>

@@ -1,6 +1,6 @@
 export default function SearchBar() {
     return (
-        <div className="sticky top-0 pb-5 bg-background">
+        <div className="bg-background sticky top-0 pb-5">
             <div className="relative w-full">
                 <input
                     type="text"
