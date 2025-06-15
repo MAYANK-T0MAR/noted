@@ -5,8 +5,8 @@ export default function SearchBar() {
                 <input
                     type="text"
                     placeholder="Search"
-                    className="w-full pl-10 pr-4 py-2 rounded-xl bg-gray-200 text-foreground placeholder-gray-400
-             border-1 border-transparent focus:border-foreground focus:outline-none"
+                    className="w-full pl-10 pr-4 py-2 rounded-xl bg-background text-foreground border-foreground placeholder-gray-400
+             border-1 focus:border-foreground focus:outline-none"
                 />
                 <svg
                     className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none"
