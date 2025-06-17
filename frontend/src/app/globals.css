@@ -45,4 +45,7 @@ nextjs-portal {
   display: none;                 /* Safari and Chrome */
 }
 
+.aspect-potrait {
+  aspect-ratio: 9/16;
+}
 
