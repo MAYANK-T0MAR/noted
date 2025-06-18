@@ -8,7 +8,7 @@ import { IoPerson } from "react-icons/io5";
 export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground transition-colors duration-400">
-      <div className="bg-background grid grid-cols-12 gap-4 max-w-7xl mx-auto px-4">
+      <div className="bg-background grid grid-cols-12 gap-4 max-w-7xl mx-auto lg:px-4">
 
         {/* Sidebar */}
         <aside className="hidden sm:block col-span-2 lg:col-span-3">
