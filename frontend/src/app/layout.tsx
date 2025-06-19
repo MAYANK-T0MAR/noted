@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${dmSans.variable} scrollbar-hide`}>
-      <body>
+      <body className="overflow-hidden">
         <ThemeProvider>
           {children}
         </ThemeProvider>

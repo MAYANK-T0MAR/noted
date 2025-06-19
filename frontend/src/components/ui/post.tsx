@@ -1,19 +1,18 @@
-import { FaBookmark, FaComment, FaHeart, FaRegBookmark, FaRegComment, FaRegHeart } from "react-icons/fa";
-import { FaRepeat } from "react-icons/fa6";
+import { FaRegBookmark, FaRegComment, FaRegHeart } from "react-icons/fa";
 
-export default function PostBox({ i }: { i: number }) {
+export default function PostBox({ i, showHeader }: { i: number; showHeader: boolean }) {
     return (
-        <div className="mx-auto max-w-[360px] h-[calc(100vh-107px)] lg:h-[640px] bg-background sm:rounded-[20px] sm:shadow-[0px_1px_4px_rgba(0,0,0,0.16)] p-3 flex flex-col justify-between relative overflow-hidden text-foreground">
-            
+        <div className={`snap-center mx-auto max-w-[360px] h-[100dvh] sm:h-[640px] bg-background sm:rounded-[20px] sm:shadow-[0px_1px_4px_rgba(0,0,0,0.16)] p-3 flex flex-col relative overflow-hidden text-foreground`}>
+
             {/* Header */}
-            <div className="flex justify-between" >
+            <div className={`flex justify-between sm:pt-0 ${showHeader ? 'pt-[44px]' : 'pt-0'}`} >
                 <div className="w-fit bg-[#21262d] px-2 py-[2px] flex items-center rounded-full text-xs text-[#c9d1d9]">Shower Thought</div>
                 <div className="text-[1rem] text-[#8b949e]">2h ago</div>
             </div>
 
             {/* Main Text */}
-            <div>
-                <div className="h-[375px] mt-1.5 overflow-ellipsis flex items-center text-2xl">
+            <div className="h-[calc(100vh-64px)] flex flex-col justify-center mb-4">
+                <div className="flex-1 mt-1.5 overflow-ellipsis flex items-center text-2xl">
                     Who told you people that philosophy has to come from only the high places? Does the gutter not also look up at the stars?
                 </div>
                 {/* Action */}
@@ -46,7 +45,7 @@ export default function PostBox({ i }: { i: number }) {
 
 
             {/* Author */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 mt-auto mb-[50px] sm:mb-0">
                 <div
                     className="w-10 h-10 rounded-full border-2 border-green-600 bg-center bg-cover"
                     style={{ backgroundImage: "url('https://i.pravatar.cc/32')" }}
