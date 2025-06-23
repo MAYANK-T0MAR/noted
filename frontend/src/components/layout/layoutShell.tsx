@@ -3,11 +3,16 @@
 import { useHeaderVisibilityContext } from "@/app/providers/HeaderVisibilityContext";
 import RightSidebar from "@/components/layout/rightbar";
 import SideBar from "@/components/layout/sidebar";
-import { FaBell, FaHome, FaPlus, FaSearch } from "react-icons/fa";
-import { IoPerson } from "react-icons/io5";
+import { i, label } from "framer-motion/client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { FaBell, FaPlus, FaRegBell } from "react-icons/fa";
+import { IoIosSearch, IoMdSearch } from "react-icons/io";
+import { IoHomeOutline, IoHomeSharp, IoPerson, IoPersonOutline } from "react-icons/io5";
 
 export default function LayoutShell({ children }: { children: React.ReactNode }) {
     const { sectionRef } = useHeaderVisibilityContext();
+    const pathName = usePathname();
 
     return (
         <main className="min-h-screen bg-background text-foreground transition-colors duration-400">
@@ -29,13 +34,17 @@ export default function LayoutShell({ children }: { children: React.ReactNode })
                 </aside>
             </div>
             <footer className="fixed bottom-0 left-0 right-0 bg-background flex justify-around items-center py-4 sm:hidden">
-                {/* Don't know why but this boy's default size is smaller than other's defaults */}
-                <button><FaHome className="text-[1.7rem]" /></button>
-                {/* ------------------------------------------ */}
-                <button><FaSearch className="text-xl" /></button>
-                <button><FaPlus className="text-xl" /></button>
-                <button><FaBell className="text-xl" /></button>
-                <button><IoPerson className="text-xl" /></button>
+                {[
+                    { icon : <IoHomeOutline className="text-xl"/>, activeIcon : <IoHomeSharp className="text-xl"/>, routeName : "/" },
+                    { icon : <IoIosSearch className="text-xl"/>, activeIcon : <IoMdSearch className="text-xl"/>, routeName : "/explore" },
+                    { icon : <FaPlus className="text-xl"/>, activeIcon : <FaPlus className="text-xl"/>, routeName : "/" },
+                    { icon : <FaRegBell className="text-xl"/>, activeIcon : <FaBell className="text-xl"/>, routeName : "/notifications" },
+                    { icon : <IoPersonOutline className="text-xl"/>, activeIcon : <IoPerson className="text-xl"/>, routeName : "/user/kaisel" },
+                ].map(({ icon, activeIcon, routeName }, i) => (
+                    <Link key={i} href={routeName}>
+                        {pathName === routeName ? activeIcon : icon}
+                    </Link>
+                ))}
             </footer>
         </main>
     )
