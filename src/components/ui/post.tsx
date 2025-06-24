@@ -1,6 +1,6 @@
 import { FaRegBookmark, FaRegComment, FaRegHeart } from "react-icons/fa";
 
-export default function PostBox({ i, showHeader }: { i: number; showHeader: boolean }) {
+export default function PostBox({showHeader }: {showHeader: boolean }) {
     return (
         <div className={`snap-center mx-auto max-w-[360px] h-[100dvh] sm:h-[640px] bg-background sm:rounded-[20px] sm:shadow-[0px_1px_4px_rgba(0,0,0,0.16)] p-3 flex flex-col relative overflow-hidden text-foreground`}>
 

@@ -3,7 +3,6 @@
 import { useHeaderVisibilityContext } from "@/app/providers/HeaderVisibilityContext";
 import RightSidebar from "@/components/layout/rightbar";
 import SideBar from "@/components/layout/sidebar";
-import { i, label } from "framer-motion/client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaBell, FaPlus, FaRegBell } from "react-icons/fa";

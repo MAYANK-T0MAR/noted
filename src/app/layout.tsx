@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans } from 'next/font/google';
 import "./globals.css";
 import { ThemeProvider } from './providers/ThemeProvider';
-import { HeaderVisibilityProvider, useHeaderVisibilityContext } from "./providers/HeaderVisibilityContext";
+import { HeaderVisibilityProvider } from "./providers/HeaderVisibilityContext";
 import LayoutShell from "@/components/layout/layoutShell";
 
 

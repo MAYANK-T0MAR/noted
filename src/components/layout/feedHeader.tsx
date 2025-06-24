@@ -1,6 +1,6 @@
 import ThemeToggle from "../ui/themeToggle";
 
-export default function FeedHeader({showHeader}: {showHeader : Boolean}) {
+export default function FeedHeader({showHeader}: {showHeader : boolean}) {
     return (
         <div className=
         {`sticky top-0 z-50 transition-transform duration-300 

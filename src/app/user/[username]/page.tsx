@@ -17,7 +17,7 @@ export default async function userProfile({ params } : userPageProps) {
     const username = await params.username
     return (
         <div>
-            This is {username}'s profile
+            {`this is  ${username}'s profile`}
         </div>
     )
 }
