@@ -7,6 +7,8 @@
 
 **Noted** is a work-in-progress full-stack social media platform built with **Next.js** and **Tailwind CSS**, designed to combine short-form vertical content with classic social interaction features.
 
+**[View the Live Project Here](https://noted-flax.vercel.app/)**
+
 ## Current Status
 
 > This project is under active development. Features and structure may change frequently. There's no fixed completion timeline as this is also a personal learning project.
